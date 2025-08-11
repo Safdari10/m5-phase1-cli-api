@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Vintage Guitar",
+    "description": "A classic 1960s electric guitar in excellent condition.",
+    "startingPrice": 500,
+    "currentBid": 750,
+    "endDate": "2024-07-10T18:00:00Z",
+    "seller": "Alice Smith"
+  },
+  {
+    "id": 2,
+    "title": "Antique Vase",
+    "description": "A rare porcelain vase from the Qing dynasty.",
+    "startingPrice": 1200,
+    "currentBid": 1500,
+    "endDate": "2024-07-12T20:00:00Z",
+    "seller": "Bob Johnson"
+  },
+  {
+    "id": 3,
+    "title": "Signed Football Jersey",
+    "description": "Official team jersey signed by the 2020 championship team.",
+    "startingPrice": 300,
+    "currentBid": 425,
+    "endDate": "2024-07-15T16:00:00Z",
+    "seller": "Charlie Lee"
+  },
+  {
+    "id": 4,
+    "title": "Antique Clock",
+    "description": "A beautiful wooden clock from the 18th century.",
+    "startingPrice": 800,
+    "currentBid": 950,
+    "endDate": "2024-07-20T14:00:00Z",
+    "seller": "David Kim"
+  }
+]
