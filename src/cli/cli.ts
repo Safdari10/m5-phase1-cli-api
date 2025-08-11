@@ -1,7 +1,7 @@
-import { command } from "commander";
+import { Command } from "commander";
 import { seedDataIntoDB, deleteAllDataFromDB } from "@/db/seed";
 
-const program = new command();
+const program = new Command();
 
 program
   .name("Auction CLI")
