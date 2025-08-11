@@ -1,4 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Auction Platform Starter
+
+This project is a [Next.js](https://nextjs.org) application using TypeScript, Tailwind CSS, and Mongoose for MongoDB integration. It is designed as a starting point for building a full-stack auction platform, featuring a basic auction item model.
+
+## Features
+
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS for styling
+- Mongoose for MongoDB models
+- Example: Auction Item model (`src/lib/models/auctionItem.ts`)
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+pnpm install
+# or
+npm install
+# or
+yarn install
+```
+
+Run the development server:
+
+```bash
+pnpm dev
+# or
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## Project Structure
+
+- `src/app/` - Next.js app directory (pages, layout, styles)
+- `src/lib/models/auctionItem.ts` - Mongoose model for auction items
+- `public/` - Static assets
+- `tailwind.config.ts` / `postcss.config.mjs` - Tailwind CSS configuration
+
+## Auction Item Model
+
+The auction item model (`src/lib/models/auctionItem.ts`) defines:
+
+- `title`: string, required
+- `description`: string, required
+- `start_price`: number, required, must be >= 0
+- `reserve_price`: number, required, must be > `start_price`
+
+## Scripts
+
+- `dev` - Start development server
+- `build` - Build for production
+- `start` - Start production server
+- `lint` - Run ESLint
+
+## Customization
+
+You can start editing the main page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+
+## Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Mongoose Documentation](https://mongoosejs.com/docs/guide.html)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+
+---
+
+This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
