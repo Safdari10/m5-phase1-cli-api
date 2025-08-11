@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { connectDB, disconnectDB } from "./connection";
 import AuctionItem from "./models/auctionItem";
 import seedData from "./data/seedData.json";
 import dotenv from "dotenv";
@@ -9,8 +10,7 @@ const uri = process.env.MONGODB_URI;
 
 export const seedDataIntoDB = async () => {
   try {
-    await mongoose.connect(uri as string);
-    console.log("Connected to MongoDB");
+    await connectDB();
 
     await AuctionItem.deleteMany({});
     console.log("Cleared existing auction data");
@@ -20,14 +20,13 @@ export const seedDataIntoDB = async () => {
   } catch (error) {
     console.error("Error seeding data:", error);
   } finally {
-    await mongoose.disconnect();
-    console.log("Disconnected from MongoDB");
+    await disconnectDB();
   }
 };
 
 export const deleteAllDataFromDB = async () => {
   try {
-    await mongoose.connect(uri as string);
+    await connectDB();
     console.log("Connected to MongoDB");
 
     await AuctionItem.deleteMany({});
@@ -35,7 +34,6 @@ export const deleteAllDataFromDB = async () => {
   } catch (error) {
     console.error("Error deleting data:", error);
   } finally {
-    await mongoose.disconnect();
-    console.log("Disconnected from MongoDB");
+    await disconnectDB();
   }
 };
