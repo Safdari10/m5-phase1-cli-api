@@ -1,9 +1,10 @@
-# Next.js AI-Powered Auction Platform
+# AuctionAI: Modern Auction Platform with AI Search
 
-This project is a full-stack [Next.js](https://nextjs.org) application for managing online auctions, featuring:
+AuctionAI is a full-stack [Next.js](https://nextjs.org) application for managing online auctions, featuring:
 
 - TypeScript, Tailwind CSS, and Mongoose for MongoDB integration
 - AI-powered search using Google Gemini (Generative AI)
+- Modern, clean UI with a custom search bar and auction item cards
 - RESTful API endpoints for auction item management
 - CLI tools for database seeding and admin tasks
 
@@ -14,6 +15,7 @@ This project is a full-stack [Next.js](https://nextjs.org) application for manag
 - Tailwind CSS for styling
 - Mongoose for MongoDB models
 - Google Gemini AI integration for smart search (`src/services/geminiService.ts`)
+- Custom search bar and auction item cards (`src/components/`)
 - RESTful API endpoints (`src/api/auction/route.ts`)
 - CLI tools for seeding and admin (`src/cli/cli.ts`)
 
@@ -44,6 +46,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 ## Project Structure
 
 - `src/app/` - Next.js app directory (pages, layout, styles)
+- `src/components/` - React UI components (SearchBar, AuctionItemCard)
 - `src/db/models/` - Mongoose models (AuctionItem, Seller, Buyer)
 - `src/db/connection.ts` - MongoDB connection logic
 - `src/services/auctionServices.ts` - Auction business logic
@@ -76,11 +79,11 @@ The auction item model (`src/db/models/auctionItem.ts`) defines:
 
 ## AI-Powered Search
 
-The platform uses Google Gemini AI to refine and improve search queries for auction items. See `src/services/geminiService.ts` for implementation details.
+AuctionAI uses Google Gemini AI to refine and improve search queries for auction items. The custom search bar allows users to toggle AI refinement for smarter, typo-tolerant results. See `src/services/geminiService.ts` for implementation details.
 
 ## Customization
 
-You can start editing the main page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the main page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file. UI components are in `src/components/`.
 
 ## Learn More
 
@@ -89,42 +92,3 @@ You can start editing the main page by modifying `src/app/page.tsx`. The page au
 - [Mongoose Documentation](https://mongoosejs.com/docs/guide.html)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - [Google Generative AI Documentation](https://ai.google.dev/docs)
-
----
-
-This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
