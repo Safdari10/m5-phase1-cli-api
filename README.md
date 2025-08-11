@@ -1,4 +1,4 @@
-# Auction Platform with AI Search
+# auction-ai
 
 This is a [Next.js](https://nextjs.org) application for managing simple online auctions. It includes:
 

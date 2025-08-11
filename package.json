@@ -1,5 +1,6 @@
 {
-  "name": "m5-phase1-cli-api",
+  "name": "auction-ai",
+  "description": "Auction platform with AI search.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
