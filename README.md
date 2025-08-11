@@ -1,10 +1,10 @@
-# AuctionAI: Modern Auction Platform with AI Search
+# Auction Platform with AI Search
 
-AuctionAI is a full-stack [Next.js](https://nextjs.org) application for managing online auctions, featuring:
+This is a [Next.js](https://nextjs.org) application for managing simple online auctions. It includes:
 
 - TypeScript, Tailwind CSS, and Mongoose for MongoDB integration
-- AI-powered search using Google Gemini (Generative AI)
-- Modern, clean UI with a custom search bar and auction item cards
+- Search with optional Google Gemini (Generative AI) refinement
+- Basic UI with a search bar and auction item cards
 - RESTful API endpoints for auction item management
 - CLI tools for database seeding and admin tasks
 
