@@ -1,6 +1,11 @@
-# Next.js Auction Platform Starter
+# Next.js AI-Powered Auction Platform
 
-This project is a [Next.js](https://nextjs.org) application using TypeScript, Tailwind CSS, and Mongoose for MongoDB integration. It is designed as a starting point for building a full-stack auction platform, featuring a basic auction item model.
+This project is a full-stack [Next.js](https://nextjs.org) application for managing online auctions, featuring:
+
+- TypeScript, Tailwind CSS, and Mongoose for MongoDB integration
+- AI-powered search using Google Gemini (Generative AI)
+- RESTful API endpoints for auction item management
+- CLI tools for database seeding and admin tasks
 
 ## Features
 
@@ -8,7 +13,9 @@ This project is a [Next.js](https://nextjs.org) application using TypeScript, Ta
 - TypeScript
 - Tailwind CSS for styling
 - Mongoose for MongoDB models
-- Example: Auction Item model (`src/lib/models/auctionItem.ts`)
+- Google Gemini AI integration for smart search (`src/services/geminiService.ts`)
+- RESTful API endpoints (`src/api/auction/route.ts`)
+- CLI tools for seeding and admin (`src/cli/cli.ts`)
 
 ## Getting Started
 
@@ -37,18 +44,27 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 ## Project Structure
 
 - `src/app/` - Next.js app directory (pages, layout, styles)
-- `src/lib/models/auctionItem.ts` - Mongoose model for auction items
+- `src/db/models/` - Mongoose models (AuctionItem, Seller, Buyer)
+- `src/db/connection.ts` - MongoDB connection logic
+- `src/services/auctionServices.ts` - Auction business logic
+- `src/services/geminiService.ts` - Google Gemini AI integration
+- `src/api/auction/route.ts` - API endpoint for searching auction items
+- `src/cli/cli.ts` - CLI for seeding and admin
 - `public/` - Static assets
 - `tailwind.config.ts` / `postcss.config.mjs` - Tailwind CSS configuration
 
 ## Auction Item Model
 
-The auction item model (`src/lib/models/auctionItem.ts`) defines:
+The auction item model (`src/db/models/auctionItem.ts`) defines:
 
 - `title`: string, required
 - `description`: string, required
 - `start_price`: number, required, must be >= 0
 - `reserve_price`: number, required, must be > `start_price`
+- `endDate`: Date, required
+- `sellerId`: ObjectId, required
+- `status`: string, required (active, inactive, suspended)
+- `buyerId`: ObjectId, optional
 
 ## Scripts
 
@@ -56,6 +72,11 @@ The auction item model (`src/lib/models/auctionItem.ts`) defines:
 - `build` - Build for production
 - `start` - Start production server
 - `lint` - Run ESLint
+- `cli` - Run CLI tools (see `src/cli/cli.ts`)
+
+## AI-Powered Search
+
+The platform uses Google Gemini AI to refine and improve search queries for auction items. See `src/services/geminiService.ts` for implementation details.
 
 ## Customization
 
@@ -67,6 +88,7 @@ You can start editing the main page by modifying `src/app/page.tsx`. The page au
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Mongoose Documentation](https://mongoosejs.com/docs/guide.html)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Google Generative AI Documentation](https://ai.google.dev/docs)
 
 ---
 
